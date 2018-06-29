@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Austin Place Search</string>
+    <string name="base_url_fousquare_api">https://api.foursquare.com/v2</string>
+    <string name="foursquare_api_client_id">ASB12PLFLAUS5O3JVXOFJQE2QWW3DS0C3LZDTZRLWI5BKECS</string>
+    <string name="foursquare_api_client_secret">Q2PMW54QVAFVLFUDNNVDKUKDVRU40WAGMEVJFMBHHV13W3ML</string>
+    <string name="favorite">Favorite</string>
+    <string name="not_favorite">Not Favorite</string>
+    <string name="google_map_api_key">AIzaSyA4zX-pgRDVMJp5STZBqBqGTeLu08OK0yM</string>
+    <string name="base_url_google_static_map">https://maps.googleapis.com/maps/api/staticmap</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
