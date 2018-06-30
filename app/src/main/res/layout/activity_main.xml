@@ -9,7 +9,7 @@
     tools:context=".Activity.MainActivity">
 
     <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/toolbarMainActivity"
+        android:id="@+id/toolbarFavoriteActivity"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
@@ -48,7 +48,7 @@
         app:layout_constraintEnd_toStartOf="@+id/buttonPlaceSearch"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbarMainActivity" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbarFavoriteActivity" />
 
     <Button
         android:id="@+id/buttonPlaceSearch"
@@ -59,7 +59,7 @@
         android:text="Search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editTextSearchPlace"
-        app:layout_constraintTop_toBottomOf="@+id/toolbarMainActivity" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbarFavoriteActivity" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerViewMainActivityPlaces"

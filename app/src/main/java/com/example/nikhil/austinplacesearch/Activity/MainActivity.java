@@ -10,12 +10,16 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.example.nikhil.austinplacesearch.Adapter.PlacesListAdapter;
 import com.example.nikhil.austinplacesearch.Interface.PlacesListAdapterActionsInterface;
@@ -59,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements PlacesListAdapter
         recyclerViewPlacesList = (RecyclerView) findViewById(R.id.recyclerViewMainActivityPlaces);
         floatingActionButtonMaps = (FloatingActionButton) findViewById(R.id.floatingActionButtonOpenMaps);
         progressBar = (ProgressBar) findViewById(R.id.progressBarMainActivity);
-        myToolbar = (Toolbar) findViewById(R.id.toolbarMainActivity);
+        myToolbar = (Toolbar) findViewById(R.id.toolbarFavoriteActivity);
 
         setSupportActionBar(myToolbar);
         getSupportActionBar().setTitle(getResources().getString(R.string.app_name));
@@ -187,5 +191,29 @@ public class MainActivity extends AppCompatActivity implements PlacesListAdapter
     public void onBackPressed() {
         super.onBackPressed();
         finish();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_favorite:
+                Intent intent = new Intent(MainActivity.this, FavoriteActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.action_about:
+                Toast.makeText(this, "Created by Nikhil Nagori", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                break;
+        }
+
+        return true;
     }
 }
